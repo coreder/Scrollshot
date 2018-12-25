@@ -28,6 +28,6 @@ ImageIO.write(screenshot, "png", new File("myscreenshot.png"));
 
 #### TODOs
 * Publish as maven package
-* Support vertical scrolling
+* Support horizontal scrolling
 * Test on all browsers
 * More unit tests
