@@ -10,7 +10,7 @@ import java.util.Map;
 
 import static java.lang.Math.toIntExact;
 
-public class ScrollshotSelenium implements IScrollShot {
+public class ScrollshotSelenium implements IScrollshot {
     private static final String GET_SCROLL_DIMS =
             "var elem = arguments[0];" +
                     "return {height: elem.scrollHeight, width: elem.scrollWidth};";

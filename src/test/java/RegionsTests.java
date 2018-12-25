@@ -16,7 +16,7 @@ public class RegionsTests {
     private WebDriver driver;
 
     @Before
-    public void setup () {
+    public void setup() {
         //driver = new FirefoxDriver();
         driver = new ChromeDriver();
     }
@@ -24,11 +24,10 @@ public class RegionsTests {
     @Test
     public void test() throws IOException {
         driver.get("https://docs.docker.com/compose/gettingstarted/#step-1-setup");
-        ScrollshotSelenium scrollshotSelenium = new ScrollshotSelenium(driver);
+        IScrollshot scrollshot = new ScrollshotSelenium(driver);
         WebElement element = driver.findElement(By.cssSelector("#navbar.nav-sidebar"));
-        BufferedImage screenshot = scrollshotSelenium.elementScreenshot(element);
-        boolean success = ImageIO.write(screenshot, "png",
-                new File("Screenshots/element_screenshot.png"));
+        BufferedImage screenshot = scrollshot.elementScreenshot(element);
+        ImageIO.write(screenshot, "png", new File("Screenshots/element_screenshot.png"));
     }
 
     @After

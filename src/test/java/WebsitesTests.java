@@ -47,8 +47,8 @@ public class WebsitesTests {
     @Test
     public void test() throws IOException {
         driver.get(url);
-        ScrollshotSelenium scrollshotSelenium = new ScrollshotSelenium(driver);
-        BufferedImage screenshot = scrollshotSelenium.screenshot();
+        IScrollshot scrollshot = new ScrollshotSelenium(driver);
+        BufferedImage screenshot = scrollshot.screenshot();
         ImageIO.write(screenshot, "png",
                 new File("Screenshots/fullpage_" + imgName + ".png"));
     }
